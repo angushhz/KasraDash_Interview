@@ -13,7 +13,7 @@ export function PendingSupplierCard({ supplier, onApprove }: PendingSupplierCard
       <CardContent className="pt-6">
         <div className="space-y-1">
           <h3 className="font-semibold">{supplier.name}</h3>
-          <p className="text-sm text-muted-foreground">{supplier.email}</p>
+          <p className="text-sm text-muted-foreground text-wt">{supplier.email}</p>
           <div className="h-2 w-24 bg-muted rounded mt-2"></div>
         </div>
       </CardContent>

@@ -1,87 +1,40 @@
-# Welcome to React Router!
+# KasraDash_Test
 
-A modern, production-ready template for building full-stack React applications using React Router.
+This project is a simple dashboard for KasraDash interview test.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+# Deployment
+I have deployed the project on Vercel: https://kasra-dash-interview.vercel.app/
 
-## Features
+# Setup run project locally
+## 1. Prerequisites
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+- Node.js version 22.13.1
+- pnpm version 10.8.1
 
-## Getting Started
+## 2. How to run the project
 
-### Installation
+1. Ensure you have the correct versions of Node.js and pnpm installed.
+2. Clone the repository to your local machine.
+3. Navigate to the project directory.
+4. Run `pnpm install` to install the project dependencies.
+5. Run `pnpm dev` to start the project.
+6. Go to `http://localhost:5173` to view the project.
 
-Install the dependencies:
+## 3.   Assumptions and Shortcuts
 
-```bash
-npm install
-```
+- I assumed that the project is a single page application.
 
-### Development
+## 4. Tech Choices and Reasoning
 
-Start the development server with HMR:
+- I chose to use React Router for the routing.
+- I chose to use Tailwind CSS for the styling.
+- I chose to use Shadcn UI for the components.
+- I chose to use Zustand for the state management.
+- I chose to use React Hook Form for the form handling.
 
-```bash
-npm run dev
-```
+==The tech stack above includes React Router for efficient routing, Tailwind CSS for utility-first styling, and Shadcn UI for  Design components. Zustand is used for lightweight state management, and React Hook Form for performant form handling. These tools provide a balance of productivity, performance, and maintainability, and are well-documented and widely used, ensuring reliability and ease of finding resources.==
 
-Your application will be available at `http://localhost:5173`.
 
-## Building for Production
+### 5. Showcase of the project
 
-Create a production build:
-
-```bash
-npm run build
-```
-
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.
+![Dashboard](./public/CleanShot2025-05-22at01.12.02-ezgif.com-video-to-gif-converter.gif)

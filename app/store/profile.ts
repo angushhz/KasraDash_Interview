@@ -12,17 +12,17 @@ type ProfileStore = {
 };
 
 const defaultProfile: ProfileFormValues = {
-  username: 'shadcn',
-  email: 'shadcn@example.com',
-  bio: 'shadcn is a software engineer',
-  urls: ['https://twitter.com/shadcn'],
+  username: 'hoangnam',
+  email: 'hoangnamqt.2001@gmail.com',
+  bio: 'hoangnam is a software engineer',
+  urls: ['https://www.linkedin.com/in/nam-tr%C6%B0%C6%A1ng/'],
 };
 
 export const useProfileStore = create<ProfileStore>()(
   persist(
     (set) => ({
       profile: defaultProfile,
-      avatar: 'https://github.com/shadcn.png',
+      avatar: 'https://media.licdn.com/dms/image/v2/D5603AQHY9mPcyc0U0g/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1720788481903?e=1753315200&v=beta&t=a92ORxO3t48fc2WQ0Cg2P9f622Wv-nDGf9NAsqmmLag',
       updateProfile: (profile) => set({ profile }),
       updatePassword: async (passwordData) => {
         // In a real app, this would call an API endpoint

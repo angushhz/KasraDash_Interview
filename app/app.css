@@ -137,6 +137,16 @@ body {
     @apply cursor-pointer;
   }
 }
-
-
-  
+@layer components {
+  .text-wt {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+  .text-wt-l-2 {
+    -webkit-line-clamp: 2;
+  }
+}
