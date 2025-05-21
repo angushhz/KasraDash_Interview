@@ -1,14 +1,11 @@
-import {
-  isRouteErrorResponse,
-  Links,
-  Meta,
-  Outlet,
-  Scripts,
-  ScrollRestoration,
-} from "react-router";
+import { isRouteErrorResponse, Links, Meta, Outlet, Scripts, ScrollRestoration } from "react-router";
 
 import type { Route } from "./+types/root";
 import "./app.css";
+import MainLayout from "./layout/main-layout";
+import { Toaster } from "sonner";
+import { ThemeProvider } from "./components/themes/theme-provider";
+import { useState } from "react";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -32,17 +29,26 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body suppressHydrationWarning>
         {children}
         <ScrollRestoration />
         <Scripts />
+        <Toaster position="top-center" />
       </body>
     </html>
   );
 }
 
 export default function App() {
-  return <Outlet />;
+console.log("🚀 ~ App ~ App:")
+
+  return (
+    <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
+      <MainLayout>
+        <Outlet />
+      </MainLayout>
+    </ThemeProvider>
+  );
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
@@ -52,10 +58,7 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
 
   if (isRouteErrorResponse(error)) {
     message = error.status === 404 ? "404" : "Error";
-    details =
-      error.status === 404
-        ? "The requested page could not be found."
-        : error.statusText || details;
+    details = error.status === 404 ? "The requested page could not be found." : error.statusText || details;
   } else if (import.meta.env.DEV && error && error instanceof Error) {
     details = error.message;
     stack = error.stack;
